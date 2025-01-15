@@ -30,8 +30,9 @@ const { status, error, data: posts } = useFetch(config.public.baseApiUrl + '/api
         <h3 class="text-xl font-bold">Siste Nytt</h3>
       </div>
       <div v-if="status === 'success'" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <NewsCard v-for="post in posts.data.posts.slice(1, 5)" :key="post.id" :post="post" />
+        <NewsCard v-for="post in posts.data.posts.slice(1)" :key="post.id" :post="post" />
       </div>
+
       <div v-else-if="error">
         <div class="text-red-600 bg-red-100 rounded-lg p-4">
           <p class="text-lg font-medium">Kunne ikke laste inn artikler :( {{ error.status }}</p>
