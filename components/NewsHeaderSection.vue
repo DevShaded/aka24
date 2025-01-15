@@ -14,7 +14,7 @@ defineProps<{
       <div class="flex flex-col md:flex-row">
         <!-- Image -->
         <div class="md:w-1/3 mb-4 md:mb-0">
-          <nuxt-img :src="config.public.baseApiUrl + '/' + post.image_url" alt="Featured Article" class="rounded-lg" />
+          <nuxt-img :src="config.public.baseApiUrl + '/' + post.image_url" alt="Featured Article" class="rounded-lg h-full w-full object-cover" />
         </div>
         <!-- Text Content -->
         <div class="md:w-2/4 md:pl-6">
