@@ -14,13 +14,13 @@ defineProps<{
       <div class="flex flex-col md:flex-row">
         <!-- Image -->
         <div class="md:w-1/3 mb-4 md:mb-0">
-          <nuxt-img :src="config.public.baseApiUrl + '/' + post.image_url" alt="Featured Article" class="rounded-lg h-full w-full object-cover" />
+          <nuxt-img :src="config.public.baseApiUrl + '/storage/' + post.image_url" alt="Featured Article" class="rounded-lg h-full w-full object-cover" />
         </div>
         <!-- Text Content -->
         <div class="md:w-2/4 md:pl-6">
           <div class="flex items-center gap-3 mb-6 sm:mt-4">
             <nuxt-img
-              :src="config.public.baseApiUrl + '/' + post.author.avatar"
+              :src="config.public.baseApiUrl + '/storage/' + post.author.avatar"
               alt="User Avatar"
               class="inline-block size-12 rounded-full"
             />
