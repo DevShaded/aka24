@@ -32,7 +32,7 @@ defineProps<{
 
     <!-- Featured Image -->
     <nuxt-img
-      :src="baseUrl + '/' + post.image_url"
+      :src="baseUrl + '/storage/' + post.image_url"
       alt="Blog Post Image"
       class="rounded-lg mt-8 mx-auto"
     />
