@@ -5,19 +5,19 @@ export async function useSeoAndSchema(post: Post, baseUrl: string, fullPath: str
     await useSeoMeta({
         title: post.title,
         description: post.lead,
-        image: `${baseUrl}/${post.image_url}`,
+        image: `${baseUrl}/storage/${post.image_url}`,
         url: fullPath,
         ogImage: `${baseUrl}/${post.image_url}`,
         twitterTitle: post.title,
         twitterDescription: post.lead,
-        twitterImage: `${baseUrl}/${post.image_url}`,
+        twitterImage: `${baseUrl}/storage/${post.image_url}`,
         twitterCard: "summary",
     });
 +
     await useSchemaOrg([
         defineArticle({
             headline: post.title,
-            image: `${baseUrl}/${post.image_url}`,
+            image: `${baseUrl}/storage/${post.image_url}`,
             datePublished: post.created_at,
             dateModified: post.updated_at,
             "@type": "Article",
